@@ -59,6 +59,29 @@ def move_character(character, direction):
         character["X-coordinate"] += compass[direction]
 
 
+def check_event(board, character):
+    if board[(character["X-coordinate"], character["Y-coordinate"])] ==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def main():
     pass
 

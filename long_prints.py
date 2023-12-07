@@ -47,8 +47,9 @@ def start_game(user_name):
     who has been kidnapped at the edge of the galaxy. 
     The variety of weapons and sturdy armor you will acquire on this journey 
     will definitely help you in your duel with the villains. Show us your abilities to the fullest. 
-    Now let’s go rescue Grogu!
+    Now let us start. This is the way.
     """)
+    # print Mandalore sign
 
 
 def finish_congrats(user_name):
