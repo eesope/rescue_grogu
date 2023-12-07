@@ -5,6 +5,7 @@ When initiate game, makes a map and a character.
 import random
 
 
+# how to print grid map
 def make_board():
 
     room_values = ["Lush Veshok Tree Forests", "The Armorer's Space", "Shipyards",
@@ -27,7 +28,9 @@ def make_board():
 
 
 def make_character():
-    return {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Skills": [], "Level": 1}
+    print("What be your name Mand'alorian?")
+    user_name = input()
+    return {"user_name": "", "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Skills": [], "Level": 1}
 
 
 def main():

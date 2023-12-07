@@ -1,9 +1,7 @@
 """
-Prints information for a user throughout the game.
+Prints long information for a user throughout the game.
 """
 
-from default_settings import make_board
-from default_settings import make_character
 
 # use font colour change package!!!
 
@@ -37,20 +35,8 @@ def print_grogu():
                           """)
 
 
-def print_board():
-    board = make_board()
-# how to print map in grid or any graphical way
-
-print_board()
-
-
-def print_character():
-    print(make_character())
-
-
 def start_game(user_name):
-    print(f"{user_name}\n")
-
+    print(f"{user_name},")
     print(r"""
     Your precious Grogu has been kidnapped by remnants of an evil empire. 
     They have ambitions to use Grogu’s mysterious powers to rule the galaxy. 
@@ -65,8 +51,8 @@ def start_game(user_name):
     """)
 
 
-def congrats_message(user_name):
-    print(f"    Congratulations, {user_name}!\n")
+def finish_congrats(user_name):
+    print(f"Congratulations, {user_name}!")
 
     print(r"""
     You finally rescued Grogu! 
@@ -77,3 +63,19 @@ def congrats_message(user_name):
     I can already hear the sound of the Razer Crest engine. 
     I am so sad to let you go, but I will remember you. Goodbye, our brave hero!
     """)
+
+
+def level_up_congrats(user_name):
+    print("----------------------------------------------------")
+    print(f"Congratulations, {user_name}!")
+    print("Your new level is approved by Mand'alore Bo-Katan Kryze")
+
+
+def main():
+    """
+    Drive the program.
+    """
+
+
+if __name__ == "__main__":
+    main()
