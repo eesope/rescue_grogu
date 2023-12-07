@@ -18,7 +18,7 @@ def get_user_choice():
         get_direction = input()
 
         if get_direction.isalpha():
-            return move_to[get_direction.lower()]
+            return move_to[get_direction.strip().lower()]
         else:
             print("Error! Please type only one letter from w, a, s, d which is match with your desired direction.")
 

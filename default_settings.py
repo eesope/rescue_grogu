@@ -29,8 +29,8 @@ def make_board():
 
 def make_character():
     print("What be your name Mand'alorian?")
-    user_name = input()
-    return {"user_name": "", "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Skills": [], "Level": 1}
+    user_name = input().strip()
+    return {"user_name": user_name, "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Skills": [], "Level": 1}
 
 
 def main():
