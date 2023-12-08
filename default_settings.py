@@ -26,8 +26,6 @@ def make_board():
         if key[1] == 4:  # [L] == Level up stage
             board[key] = "[L]Mandalore Imperial base"
 
-    print("board", board)
-
     return board
 
 
