@@ -60,26 +60,13 @@ def move_character(character, direction):
 
 
 def check_event(board, character):
-    if board[(character["X-coordinate"], character["Y-coordinate"])] ==
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if board[(character["X-coordinate"], character["Y-coordinate"])][1] == "HP game":
+        return True
+    if board[(character["X-coordinate"], character["Y-coordinate"])][0][1] == "L":
+        return False
+    else:
+        character["Skills"] = board[(character["X-coordinate"], character["Y-coordinate"])][1]
+        return character["Skills"]
 
 
 def main():
