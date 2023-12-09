@@ -85,7 +85,6 @@ def start_game(user_name):
     will definitely help you in your duel with the villains. Show us your abilities to the fullest. 
     Now let us start. This is the way.
     """)
-    # print Mandalore sign
 
 
 def finish_congrats(user_name):
@@ -112,6 +111,14 @@ def main():
     """
     Drive the program.
     """
+
+    start_game(user_name)
+    mandalore_symbol()
+
+    level_up_congrats(user_name)
+
+    finish_congrats(user_name)
+    grogu()
 
 
 if __name__ == "__main__":

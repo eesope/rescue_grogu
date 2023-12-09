@@ -56,6 +56,8 @@ def main():
     """
 
     make_board()
+    make_character()
+    show_current_location(board, character)
 
 
 if __name__ == "__main__":

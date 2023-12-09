@@ -70,7 +70,11 @@ def check_event(board, character):
 
 
 def main():
-    pass
+
+    get_user_choice()
+    validate_move(board, character, direction)
+    move_character(character, direction)
+    check_event(board, character)
 
 
 if __name__ == "__main__":
