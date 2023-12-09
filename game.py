@@ -8,6 +8,8 @@ import long_prints
 import movement
 import mini_games
 import level_up_stage
+import time
+import sys
 
 
 def game():
@@ -16,12 +18,15 @@ def game():
     """
 
     print("Opening the game...")
-    board = default_settings.make_board()
-    character = default_settings.make_character()
-    print("------------------------------")
+    time.sleep(3)
 
-    long_prints.start_game(character)
     long_prints.mandalore_symbol()
+
+    character = default_settings.make_character()
+    long_prints.start_game(character["user_name"])
+
+    board = default_settings.make_board()
+    default_settings.show_current_location(board, character)
 
 
 def main():
@@ -29,7 +34,31 @@ def main():
     Drive the program.
     """
 
-    game()
+    if len(sys.argv) != 1:
+        print("--------------------------------------------------------------------------------")
+        print("Error! Please type correct command: ")
+        print("python game.py")
+        print("--------------------------------------------------------------------------------")
+
+    else:
+        try:
+            game()
+
+        except AttributeError:
+            print("--------------------------------------------------------------------------------")
+            print("Error! Please check file name.")
+            print("--------------------------------------------------------------------------------")
+
+        except ValueError:
+            print("--------------------------------------------------------------------------------")
+            print("Error! Please type a valid command.")
+            print("--------------------------------------------------------------------------------")
+
+        except KeyboardInterrupt:
+            print("")
+            print("--------------------------------------------------------------------------------")
+            print("Finished the game through Keyboard input. Good bye.")
+            print("--------------------------------------------------------------------------------")
 
 
 if __name__ == "__main__":

@@ -46,8 +46,8 @@ def show_current_location(board, character):
     """
 
     # print map and character location
-    print(f"Your current location is {board[(character['X-coordinate'], character['Y-coordinate'])][3:]}"
-          f"in Stage {character['level']}")
+    print(f"Your current location is {board[(character['X-coordinate'], character['Y-coordinate'])][0][3:]}"
+          f"and Level {character['Level']}")
 
 
 def main():

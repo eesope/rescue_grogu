@@ -3,9 +3,6 @@ Prints long information for a user throughout the game.
 """
 
 
-# use font colour change package!!!
-
-
 def grogu():
     print(
         r"""                          
@@ -72,18 +69,25 @@ def mandalore_symbol():
 
 
 def start_game(user_name):
-    print(f"{user_name},")
+    print(f"Hello {user_name},")
     print(r"""
     Your precious Grogu has been kidnapped by remnants of an evil empire. 
-    They have ambitions to use Grogu’s mysterious powers to rule the galaxy. 
-    But because young Grogu is still an apprentice to become a Mandalorian, 
-    he lacks the power to defeat the villain on his own. 
+    They have ambitions to use Grogu’s mysterious powers to rule the galaxy. But, because young Grogu is 
+    still an apprentice to become a Mandalorian, he lacks the power to defeat the villain on his own. 
     Who knows what disaster will befall Grogu if you don‘t save him quickly? 
     Right now, you must use both your intellect and brute strength to fight the villains and rescue Grogu, 
     who has been kidnapped at the edge of the galaxy. 
-    The variety of weapons and sturdy armor you will acquire on this journey 
-    will definitely help you in your duel with the villains. Show us your abilities to the fullest. 
-    Now let us start. This is the way.
+    The variety of weapons and sturdy armor you will acquire on this journey will definitely help you 
+    in your duel with the villains. Show us your abilities to the fullest. 
+    Now let us start.
+    """)
+    print("Loading...")
+    print(r"""
+    .
+    .
+    This is the way.
+    .
+    .
     """)
 
 
