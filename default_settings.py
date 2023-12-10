@@ -8,7 +8,7 @@ import random
 # how to print grid map
 def make_board():
     # [M] == Merit and [D] == Demerit for character
-    room_value = [("[M]Lush Veshok Tree Forests", "Fly by using Razorcrest"),
+    room_value = [("[M]Lush Veshok Tree Forests", "Fly by using the Razor Crest"),
                   ("[M]The Armorer's Space", "Wear beskar armor"),
                   ("[D]Shipyards", "HP game"),
                   ("[D]Warehouse", "Use IB-94 blaster pistol"),
@@ -55,8 +55,8 @@ def main():
     Drive the program.
     """
 
-    make_board()
-    make_character()
+    board = make_board()
+    character = make_character()
     show_current_location(board, character)
 
 

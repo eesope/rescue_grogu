@@ -60,6 +60,12 @@ def main():
             print("Finished the game through Keyboard input. Good bye.")
             print("--------------------------------------------------------------------------------")
 
+        except SyntaxError:
+            print("--------------------------------------------------------------------------------")
+            print("Error! Please type correct command: ")
+            print("python game.py")
+            print("--------------------------------------------------------------------------------")
+
 
 if __name__ == "__main__":
     main()
