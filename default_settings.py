@@ -32,7 +32,7 @@ def make_board():
 def make_character():
     print("What be your name Mand'alorian?")
     user_name = input().strip()
-    return {"user_name": user_name, "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Skills": [], "Level": 1}
+    return {"user_name": user_name, "X-coordinate": 0, "Y-coordinate": 0, "HP": 5, "Skills": [], "Level": 1}
 
 
 def show_current_location(board, character):
@@ -50,6 +50,28 @@ def show_current_location(board, character):
           f"and Level {character['Level']}")
 
 
+def is_alive(character):
+    """
+    Check if the HP of character is greater than 0.
+    """
+
+    if character["HP"] > 0:
+        return True
+    else:
+        return False
+
+
+def grogu_rescued(board, character):
+    """
+    Check whether the character has made it to their destination.
+    """
+
+    if (character["X-coordinate"], character["Y-coordinate"]) == max(board.keys()):
+        return True
+    else:
+        return False
+
+
 def main():
     """
     Drive the program.
@@ -58,6 +80,8 @@ def main():
     board = make_board()
     character = make_character()
     show_current_location(board, character)
+    is_alive(character)
+    grogu_rescued(board, character)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,6 @@
 """
 Collection of mini games for each movement, level up, and final stage.
 """
-import random
 
 
 def go_lv2():
@@ -9,8 +8,19 @@ def go_lv2():
     Win this game, you are now level 2 player.
     """
 
-    # "question": "The binary number 10111100110; is equivalent to the Decimal number 1510"
-    # "correct_answer": "True"
+    print("Hello, the guardian of the child.")
+    print("Answer this question to be a level 2; get a higher HP.")
+    print("")
+    print("The binary number 10111100110; is equivalent to the Decimal number 1510. True or False?")
+    print("You only have one chance.")
+
+    answer = input()
+    if answer.lower() == "true":
+        print("Correct. Wish you safe trip.")
+        return True
+    else:
+        print("You may need to train more, brave one.")
+        return False
 
 
 def go_lv3():
@@ -18,8 +28,19 @@ def go_lv3():
     Win this game, you are now level 3 player.
     """
 
-    # "question": "The hexadecimal number 7E7; is equivalent to the Decimal number"
-    # "correct_answer": "2023"
+    print("Hello, the guardian of the child.")
+    print("Answer this question to be a level 3, finally.")
+    print("")
+    print("The hexadecimal number 7E7; is equivalent to the Decimal number 2023. True or False?")
+    print("You only have one chance.")
+
+    answer = input()
+    if answer.lower() == "true":
+        print("Correct. Your child is around here. Wish you the best of luck.")
+        return True
+    else:
+        print("You may need to train more, brave one.")
+        return False
 
 
 def moff_gideon():
@@ -46,7 +67,6 @@ def moff_gideon():
                 else:
                     print("Give one palindrome; it must include more than 4 alphabets: ")
                     answer = input()
-
 
 
 def main():
