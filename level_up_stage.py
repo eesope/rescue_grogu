@@ -48,6 +48,10 @@ def moff_gideon():
     Defeat him through a palindrome, you will resque Grogu.
     """
 
+    print("You eventually came here, the guardian of the child.")
+    print("Answer this question. If failed, the force is mine.")
+    print("")
+
     print("Give one palindrome; it must include more than 4 alphabets: ")
     answer = input()
     until = len(answer) // 2
@@ -67,12 +71,14 @@ def moff_gideon():
                 else:
                     print("Give one palindrome; it must include more than 4 alphabets: ")
                     answer = input()
+        print("Finally! You defeated Moff Gideon; rescued Grogu!")
+        return True
 
 
 def main():
 
-    go_lv2()
-    go_lv3()
+    # go_lv2()
+    # go_lv3()
     moff_gideon()
 
 

@@ -7,20 +7,25 @@ import random
 
 # how to print grid map
 def make_board():
-    # [M] == Merit and [D] == Demerit for character
-    room_value = [("[M]Lush Veshok Tree Forests", "Fly by using the Razor Crest"),
-                  ("[M]The Armorer's Space", "Wear beskar armor"),
-                  ("[D]Shipyards", "HP game"),
-                  ("[D]Warehouse", "Use IB-94 blaster pistol"),
-                  ("[D]The Living Waters", "HP game"),
-                  ("[D]Ossus", "HP game"),
-                  ("[M]Cafe", "Wild card"),
-                  ("[D]Unknown planet", "HP game")]
+    # [#] == character level
+    lv1_rooms = [("[1]The Armorer's Space", "beskar"), ("Thicket")]
+    lv3_rooms = [("[3]Shipyards", "constant"), ("Thicket")]
+    lv2_rooms = [("[2]Lush Veshok Tree Forests", "razor_crest"),
+                  ("[2]Warehouse", "roll_die"),
+                  ("[2]The Living Waters", "ahsoka"),
+                  ("[2]Ossus", "razor_crest"),
+                  ("[2]Cafe", "roll_die"),
+                  ("[2]Unknown planet", "bones")]
 
     board = {}
     for row in range(5):
         for column in range(5):
-            board[(row, column)] = room_value[random.randint(0, len(room_value) - 1)]
+            if row == 0:
+                board[(row, column)] = lv1_rooms[random.randint(0, len(lv1_rooms) - 1)]
+            if row == 1 or row == 2 or row == 3:
+                board[(row, column)] = lv2_rooms[random.randint(0, len(lv2_rooms) - 1)]
+            if row == 4:
+                board[(row, column)] = lv3_rooms[random.randint(0, len(lv3_rooms) - 1)]
 
     for key in board.keys():
         if key[1] == 4:  # [L] == Level up stage
