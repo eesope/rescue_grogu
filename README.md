@@ -10,3 +10,5 @@ A01344898
 eesope
 
 ### Comments about this project
+Please start the game with below command line in your terminal.
+python game.py
